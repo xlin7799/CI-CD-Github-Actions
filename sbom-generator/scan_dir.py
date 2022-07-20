@@ -12,6 +12,7 @@ REPO_PATH = ''
 SOURCE_PATH = ''
 
 def scan_dir():
+    print(URL)
     dependency_path = os.path.join(REPO_PATH, 'source/dependency')
     path_3rdparty = os.path.join(REPO_PATH, 'source/dependency/3rdparty')
     manifest_path = os.path.join(REPO_PATH, 'manifest.yml')
