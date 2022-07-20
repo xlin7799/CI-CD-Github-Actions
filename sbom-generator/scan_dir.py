@@ -123,6 +123,7 @@ def scan_dir():
 
 
 if __name__ == "__main__":
+    print(os.getenv('GITHUB_REPOSITORY'))
     parser = ArgumentParser(description='SBOM generator')
     parser.add_argument('--repo-root-path',
                         type=str,
