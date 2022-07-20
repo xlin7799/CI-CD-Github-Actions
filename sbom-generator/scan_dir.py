@@ -32,6 +32,10 @@ def scan_dir():
             dependency_info[dependency['name']] = dependency
     except Exception:
         pass
+    
+    #delete later
+    manifest['dependencies'][0]['license'] = 'Apache License 2.0'
+    manifest['dependencies'][1]['license'] = 'OASIS License'
 
     #scan the source code
     for subdir, dirs, files in os.walk(SOURCE_PATH):
