@@ -145,6 +145,7 @@ if __name__ == "__main__":
     REPO_PATH = os.path.abspath(args.repo_root_path)
     URL = args.url
     SOURCE_PATH = os.path.abspath(args.source_path)
-
+    print(URL)
+    
     scan_dir()
 
