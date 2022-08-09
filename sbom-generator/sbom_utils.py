@@ -16,10 +16,10 @@ def package_hash(file_list):
     h = hashlib.sha1("".join(file_list).encode())
     return h.hexdigest()
 
-def file_writer(o, filepath, filename, sha1, license, copyright='NOASSERTION', comment='NOASSERTION'):
-    o.write('FileName: '+ filename + '\n')
-    o.write('SPDXID: SPDXRef-File-'+ filename.replace('/', '-') + '\n')
-    o.write('FileChecksum: SHA1: '+ hash_sha1(filepath) + '\n')
+def file_writer(o, filepath, sha1, license, copyright='NOASSERTION', comment='NOASSERTION'):
+    o.write('FileName: .'+ filename + '\n')
+    o.write('SPDXID: SPDXRef-File'+ filename.replace('/', '-') + '\n')
+    o.write('FileChecksum: SHA1: '+ sha1 + '\n')
     o.write('LicenseConcluded: '+ license + '\n')
     o.write('FileCopyrightText: '+ copyright + '\n')
     o.write('FileComment: '+ comment + '\n')
